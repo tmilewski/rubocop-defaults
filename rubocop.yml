@@ -3,6 +3,8 @@
 
 AllCops:
   TargetRubyVersion: 2.3
+  Exclude:
+    - 'db/schema.rb'
 
 Rails:
   Enabled: true
@@ -12,10 +14,15 @@ Documentation:
 
 Metrics/LineLength:
   Max: 125
+  Exclude:
+    - 'db/migrate/*'
+    - 'config/initializers/devise.rb'
 
 Metrics/MethodLength:
   CountComments: false
   Max: 10
+  Exclude:
+    - 'db/migrate/*'
 
 Metrics/ModuleLength:
   CountComments: false
