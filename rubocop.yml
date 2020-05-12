@@ -1,0 +1,43 @@
+# see https://github.com/bbatsov/rubocop/blob/master/config/default.yml
+# for default configuration
+
+AllCops:
+  TargetRubyVersion: 2.7
+  DisplayCopNames: true
+
+Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 125
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 10
+
+Metrics/ModuleLength:
+  CountComments: false
+  Max: 100
+
+Metrics/AbcSize:
+  # The ABC size is a calculated magnitude, so this number can be a Fixnum or a Float.
+  # http://c2.com/cgi/wiki?AbcMetric
+  Max: 15
+
+Metrics/CyclomaticComplexity:
+  # http://www.rubydoc.info/github/bbatsov/rubocop/Rubocop/Cop/Style/CyclomaticComplexity
+  Max: 6
+
+Metrics/PerceivedComplexity:
+  # http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Metrics/PerceivedComplexity
+  Max: 7
+
+Metrics/ClassLength:
+  CountComments: false
+  Max: 100
+
+Style/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Style/ClassAndModuleChildren:
+  Enabled: false
