@@ -5,11 +5,30 @@ AllCops:
   TargetRubyVersion: 2.7
   DisplayCopNames: true
 
-Documentation:
-  Enabled: false
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
 
-Metrics/LineLength:
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/LineLength:
   Max: 125
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
 
 Metrics/MethodLength:
   CountComments: false
@@ -36,8 +55,23 @@ Metrics/ClassLength:
   CountComments: false
   Max: 100
 
-Style/MultilineMethodCallIndentation:
-  EnforcedStyle: indented
-
 Style/ClassAndModuleChildren:
   Enabled: false
+
+Style/ExponentialNotation:
+  Enabled: true
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
+Style/NumericLiterals:
+  Enabled: false
+
+Style/SlicingWithRange:
+  Enabled: true
